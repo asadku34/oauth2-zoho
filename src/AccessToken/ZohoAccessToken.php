@@ -29,7 +29,7 @@ class ZohoAccessToken extends AccessToken
         }
         
         if (!empty($options['expires_in_sec'])) {
-            $options['expires'] = $options['expires_in_sec'];
+            $options['expires_in'] = $options['expires_in_sec'];
         }
 
         parent::__construct($options);
