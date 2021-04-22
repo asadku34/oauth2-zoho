@@ -27,7 +27,7 @@ class ZohoAccessToken extends AccessToken
         if (!empty($options['token_type'])) {
             $this->tokenType = $options['token_type'];
         }
-        
+
         if (!empty($options['expires_in_sec'])) {
             $options['expires_in'] = $options['expires_in_sec'];
         }

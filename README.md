@@ -48,7 +48,7 @@ if (!isset($_GET['code'])) {
         'access_type' => 'offline' //Important: If you want to generate the refresh token, set this value as offline
     ]);
 
-    $_SESSION['oauth2state'] = $provider->state;
+    $_SESSION['oauth2state'] = $provider->getState();
     header('Location: ' . $authUrl);
     exit;
 
