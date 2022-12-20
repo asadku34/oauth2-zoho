@@ -45,7 +45,8 @@ if (!isset($_GET['code'])) {
             'ZohoCRM.modules.ALL', //Important: Define your data accessability scope here
             'ZohoCRM.settings.ALL',
         ],
-        'access_type' => 'offline' //Important: If you want to generate the refresh token, set this value as offline
+        'access_type' => 'offline', //Important: If you want to generate the refresh token, set this value as offline
+        'prompt' => 'consent'       //Important: Will not return a refresh token if this is not also set
     ]);
 
     $_SESSION['oauth2state'] = $provider->getState();
